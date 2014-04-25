@@ -7,8 +7,8 @@
 %define haproxy_datadir %{_datadir}/haproxy
 
 %define version 1.5
-%define dev_rel dev22
-%define release 2
+%define dev_rel dev23
+%define release 1
 
 Name: haproxy
 Summary: HA-Proxy is a TCP/HTTP reverse proxy for high availability environments
@@ -121,6 +121,9 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
+* Fri Apr 24 2014 Jordan Starcher <jstarcher@gmail.com> - 1.5dev23
+- Update to haproxy 1.5-dev23
+
 * Tue Feb 04 2014 Chris Schuld <chris@chrisschuld.com> - 1.5dev22
 - Update to haproxy 1.5-dev22
 
