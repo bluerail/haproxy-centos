@@ -121,7 +121,7 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
-* Fri Apr 24 2014 Chris Schuld <jstarcher@gmail.com> - 1.5dev23
+* Fri Apr 24 2014 Jordan Starcher <jstarcher@gmail.com> - 1.5dev23
 - Update to haproxy 1.5-dev23
 
 * Tue Feb 04 2014 Chris Schuld <chris@chrisschuld.com> - 1.5dev22
