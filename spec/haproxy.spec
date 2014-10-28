@@ -6,8 +6,8 @@
 %define haproxy_confdir %{_sysconfdir}/haproxy
 %define haproxy_datadir %{_datadir}/haproxy
 
-%define version 1.5.3
-#%define dev_rel dev25
+%define version 1.5.6
+#%define dev_rel dev0
 #%define release 1
 
 Name: haproxy
@@ -121,6 +121,9 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
+* Tue Oct 28 2014 Chris Schuld <chris@chrisschuld.com> - 1.5.6
+- Update to haproxy 1.5.6
+
 * Wed Aug 20 2014 Alan Ivey <alanivey@gmail.com> - 1.5.3
 - Update to haproxy 1.5.3
 - Add %{dist} to Release
