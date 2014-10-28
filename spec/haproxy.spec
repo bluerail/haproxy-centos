@@ -53,7 +53,11 @@ possibility not to expose fragile web servers to the net.
 use_regparm="USE_REGPARM=1"
 %endif
 
-make %{?_smp_mflags} CPU="generic" TARGET="linux26" USE_PCRE=1 USE_OPENSSL=1 USE_ZLIB=1 ${use_regparm}
+%ifarch %ix86
+use_march="CFLAGS=-march=i486"
+%endif
+
+make %{?_smp_mflags} CPU="generic" TARGET="linux26" USE_PCRE=1 USE_OPENSSL=1 USE_ZLIB=1 ${use_regparm} ${use_march}
 
 pushd contrib/halog
 make halog
