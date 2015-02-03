@@ -6,7 +6,7 @@
 %define haproxy_confdir %{_sysconfdir}/haproxy
 %define haproxy_datadir %{_datadir}/haproxy
 
-%define version 1.5.3
+%define version 1.5.11
 #%define dev_rel dev25
 #%define release 1
 
@@ -121,6 +121,9 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
+* Tue Feb 03 2015 Robert Collazo <robert@collazo.ws> - 1.5.11
+- Update to haproxy 1.5.11
+
 * Wed Aug 20 2014 Alan Ivey <alanivey@gmail.com> - 1.5.3
 - Update to haproxy 1.5.3
 - Add %{dist} to Release
@@ -130,6 +133,9 @@ fi
 
 * Mon May 12 2014 Jeff Palmer <jeff@palmerit.net> - 1.5dev25
 - Update to haproxy 1.5-dev25
+
+* Tue May 06 2014 Robert Collazo <robert@collazo.ws> - 1.5dev24
+- Update to haproxy 1.5-dev24
 
 * Tue Feb 04 2014 Chris Schuld <chris@chrisschuld.com> - 1.5dev22
 - Update to haproxy 1.5-dev22
