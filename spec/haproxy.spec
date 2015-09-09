@@ -6,7 +6,7 @@
 %define haproxy_confdir %{_sysconfdir}/haproxy
 %define haproxy_datadir %{_datadir}/haproxy
 
-%define version 1.5.12
+%define version 1.5.14
 
 Name: haproxy
 Summary: HA-Proxy is a TCP/HTTP reverse proxy for high availability environments
@@ -119,6 +119,10 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
+
+* Wed Sep 09 2015 Dick Davies <dick@hellooperator.net> - 1.5.14
+- Update to 1.5.14  (fix for CVE-2015-3281)
+
 * Wed Aug 20 2014 Alan Ivey <alanivey@gmail.com> - 1.5.3
 - Update to haproxy 1.5.3
 - Add %{dist} to Release
