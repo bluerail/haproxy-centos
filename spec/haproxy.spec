@@ -7,6 +7,8 @@
 %define haproxy_datadir %{_datadir}/haproxy
 
 %define version 1.5.14
+%define release 1:x
+
 
 Name: haproxy
 Summary: HA-Proxy is a TCP/HTTP reverse proxy for high availability environments
