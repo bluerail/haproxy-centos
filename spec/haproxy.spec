@@ -6,9 +6,9 @@
 %define haproxy_confdir %{_sysconfdir}/haproxy
 %define haproxy_datadir %{_datadir}/haproxy
 
-%define version 1.5.3
-#%define dev_rel dev25
-#%define release 1
+%define version 1.5.14
+%define release 2
+
 
 Name: haproxy
 Summary: HA-Proxy is a TCP/HTTP reverse proxy for high availability environments
@@ -65,7 +65,6 @@ make install-bin DESTDIR=%{buildroot} PREFIX=%{_prefix}
 make install-man DESTDIR=%{buildroot} PREFIX=%{_prefix}
 
 %{__install} -p -D -m 0755 %{SOURCE1} %{buildroot}%{_initrddir}/%{name}
-%{__install} -p -D -m 0644 %{SOURCE2} %{buildroot}%{haproxy_confdir}/%{name}.cfg
 %{__install} -p -D -m 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 %{__install} -d -m 0755 %{buildroot}%{haproxy_home}
 %{__install} -d -m 0755 %{buildroot}%{haproxy_datadir}
@@ -121,6 +120,10 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
+
+* Wed Sep 09 2015 Dick Davies <dick@hellooperator.net> - 1.5.14
+- Update to 1.5.14  (fix for CVE-2015-3281)
+
 * Wed Aug 20 2014 Alan Ivey <alanivey@gmail.com> - 1.5.3
 - Update to haproxy 1.5.3
 - Add %{dist} to Release
