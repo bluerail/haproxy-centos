@@ -7,7 +7,7 @@
 %define haproxy_datadir %{_datadir}/haproxy
 
 %define version 1.5.14
-%define release 1
+%define release 2
 
 
 Name: haproxy
@@ -65,7 +65,6 @@ make install-bin DESTDIR=%{buildroot} PREFIX=%{_prefix}
 make install-man DESTDIR=%{buildroot} PREFIX=%{_prefix}
 
 %{__install} -p -D -m 0755 %{SOURCE1} %{buildroot}%{_initrddir}/%{name}
-%{__install} -p -D -m 0644 %{SOURCE2} %{buildroot}%{haproxy_confdir}/%{name}.cfg
 %{__install} -p -D -m 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 %{__install} -d -m 0755 %{buildroot}%{haproxy_home}
 %{__install} -d -m 0755 %{buildroot}%{haproxy_datadir}
