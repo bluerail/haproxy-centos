@@ -6,9 +6,9 @@
 %define haproxy_confdir %{_sysconfdir}/haproxy
 %define haproxy_datadir %{_datadir}/haproxy
 
-%define version 1.5.3
-#%define dev_rel dev25
-#%define release 1
+%define version 1.6.2
+## %define dev_rel dev25
+## %define release 1
 
 Name: haproxy
 Summary: HA-Proxy is a TCP/HTTP reverse proxy for high availability environments
@@ -18,7 +18,7 @@ License: GPLv2+
 URL: http://www.haproxy.org/
 Group: System Environment/Daemons
 
-Source0: http://www.haproxy.org/download/1.5/src/haproxy-%{version}.tar.gz
+Source0: http://www.haproxy.org/download/1.6/src/haproxy-%{version}.tar.gz
 Source1: haproxy.init
 Source2: haproxy.cfg
 Source3: haproxy.logrotate
@@ -103,12 +103,8 @@ fi
 %files
 %defattr(-,root,root,-)
 %doc CHANGELOG LICENSE README doc/*
-%doc examples/url-switching.cfg
 %doc examples/acl-content-sw.cfg
 %doc examples/content-sw-sample.cfg
-%doc examples/cttproxy-src.cfg
-%doc examples/haproxy.cfg
-%doc examples/tarpit.cfg
 %{haproxy_datadir}
 %dir %{haproxy_confdir}
 %config(noreplace) %{haproxy_confdir}/%{name}.cfg
@@ -121,6 +117,12 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
+* Mon Nov 09 2015 Chris Schuld <chris@chrisschuld.com> - 1.6.2
+- Update to haproxy 1.6.2
+
+* Mon Feb 02 2015 Chris Schuld <chris@chrisschuld.com> - 1.5.11
+- Update to haproxy 1.5.11
+
 * Wed Aug 20 2014 Alan Ivey <alanivey@gmail.com> - 1.5.3
 - Update to haproxy 1.5.3
 - Add %{dist} to Release
