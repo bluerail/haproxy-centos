@@ -6,7 +6,7 @@
 %define haproxy_confdir %{_sysconfdir}/haproxy
 %define haproxy_datadir %{_datadir}/haproxy
 
-%define version 1.5.11
+%define version 1.6.2
 ## %define dev_rel dev25
 ## %define release 1
 
@@ -18,7 +18,7 @@ License: GPLv2+
 URL: http://www.haproxy.org/
 Group: System Environment/Daemons
 
-Source0: http://www.haproxy.org/download/1.5/src/haproxy-%{version}.tar.gz
+Source0: http://www.haproxy.org/download/1.6/src/haproxy-%{version}.tar.gz
 Source1: haproxy.init
 Source2: haproxy.cfg
 Source3: haproxy.logrotate
@@ -121,6 +121,9 @@ fi
 %exclude %{_sbindir}/haproxy-systemd-wrapper
 
 %changelog
+* Mon Nov 09 2015 Chris Schuld <chris@chrisschuld.com> - 1.6.2
+- Update to haproxy 1.6.2
+
 * Mon Feb 02 2015 Chris Schuld <chris@chrisschuld.com> - 1.5.11
 - Update to haproxy 1.5.11
 
